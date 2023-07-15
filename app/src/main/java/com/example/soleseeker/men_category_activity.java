@@ -1,90 +1,88 @@
 package com.example.soleseeker;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-import androidx.annotation.NonNull;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-
-
 import com.google.android.material.tabs.TabLayout;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class men_category_activity extends AppCompatActivity {
 
-	private ImageButton basketball;
-	private ImageButton running;
-	private ImageButton casual;
+	private ImageButton basketballBtn;
+	private ImageButton runningBtn;
+	private ImageButton casualBtn;
+	private TabLayout tabLayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.men_category);
 
-		basketball = findViewById(R.id.Basketball);
-		running = findViewById(R.id.Running);
-		casual = findViewById(R.id.Casual);
+		basketballBtn = findViewById(R.id.Basketball);
+		runningBtn = findViewById(R.id.Running);
+		casualBtn = findViewById(R.id.Casual);
+		tabLayout = findViewById(R.id.tabLayout);
 
-		basketball.setOnClickListener(new View.OnClickListener() {
+		tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+			@Override
+			public void onTabSelected(TabLayout.Tab tab) {
+				int position = tab.getPosition();
+				switch (position) {
+					case 0:
+						// Handle Men tab click
+						// Already in the Men category, do nothing
+						break;
+					case 1:
+						// Handle Women tab click
+						Intent womenIntent = new Intent(men_category_activity.this, women_category_activity.class);
+						startActivity(womenIntent);
+						break;
+					case 2:
+						// Handle By Brand tab click
+						Intent brandIntent = new Intent(men_category_activity.this, brand_category_activity.class);
+						startActivity(brandIntent);
+						break;
+				}
+			}
+
+			@Override
+			public void onTabUnselected(TabLayout.Tab tab) {
+				// Handle tab unselection (if needed)
+			}
+
+			@Override
+			public void onTabReselected(TabLayout.Tab tab) {
+				// Handle tab reselection (if needed)
+			}
+		});
+
+		basketballBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				// Handle Basketball button click
 				Intent intent = new Intent(men_category_activity.this, main_menu_activity.class);
 				startActivity(intent);
 			}
 		});
 
-		running.setOnClickListener(new View.OnClickListener() {
+		runningBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				// Handle Running button click
 				Intent intent = new Intent(men_category_activity.this, main_menu_activity.class);
 				startActivity(intent);
 			}
 		});
 
-		casual.setOnClickListener(new View.OnClickListener() {
+		casualBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				// Handle Casual button click
 				Intent intent = new Intent(men_category_activity.this, main_menu_activity.class);
 				startActivity(intent);
 			}
 		});
-
-		TabLayout tabLayout = findViewById(R.id.tabLayout);
-		ViewPager viewPager = findViewById(R.id.viewPager);
-
-	/*	List<Fragment> fragments = new ArrayList<>();
-		fragments.add(new MenFragment());
-		fragments.add(new WomenFragment());
-		fragments.add(new BrandFragment());
-
-		PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments);
-		viewPager.setAdapter(pagerAdapter);
-		tabLayout.setupWithViewPager(viewPager);*/
-	}
-
-	public class PagerAdapter extends FragmentPagerAdapter {
-		private List<Fragment> fragments;
-
-		public PagerAdapter(FragmentManager fm, List<Fragment> fragments) {
-			super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-			this.fragments = fragments;
-		}
-
-		@NonNull
-		@Override
-		public Fragment getItem(int position) {
-			return fragments.get(position);
-		}
-
-		@Override
-		public int getCount() {
-			return fragments.size();
-		}
 	}
 }
+

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tabMen"
+        android:title="Menu Item 1" />
+    <item
+        android:id="@+id/tabWomen"
+        android:title="Menu Item 2" />
+    <item
+        android:id="@+id/tabBrand"
+        android:title="Menu Item 3" />
+</menu>

@@ -9,6 +9,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class men_category_activity extends AppCompatActivity {
 
+	private ImageButton backButton;
 	private ImageButton basketballBtn;
 	private ImageButton runningBtn;
 	private ImageButton casualBtn;
@@ -19,10 +20,20 @@ public class men_category_activity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.men_category);
 
+		backButton = findViewById(R.id.backButton);
 		basketballBtn = findViewById(R.id.Basketball);
 		runningBtn = findViewById(R.id.Running);
 		casualBtn = findViewById(R.id.Casual);
 		tabLayout = findViewById(R.id.tabLayout);
+
+		backButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent mainMenuIntent = new Intent(men_category_activity.this, main_menu_activity.class);
+				startActivity(mainMenuIntent);
+				finish();
+			}
+		});
 
 		tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 			@Override
@@ -85,4 +96,3 @@ public class men_category_activity extends AppCompatActivity {
 		});
 	}
 }
-

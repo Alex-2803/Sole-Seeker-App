@@ -1,9 +1,368 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".brand_category_activity">
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="62dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:contentDescription="Back Button"
+        android:src="@drawable/baseline_arrow_back_ios_new_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Categories"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/orange"
+        app:tabIndicatorHeight="10dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/orange"
+        app:tabTextColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"
+        android:paddingBottom="20dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabMen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="men"
+            android:text="Men"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="71dp" /> <!-- Adjust the text size here -->
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabWomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Women"
+            android:contentDescription="women"
+            android:textSize="25dp" /> <!-- Adjust the text size here -->
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By Brand"
+            android:contentDescription="by brand"
+            android:textSize="18sp" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="view Pager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-57dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- First ImageButton and TextView -->
+    <ImageButton
+        android:id="@+id/nikeBtn"
+        android:layout_width="155dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="basketball_1"
+        android:background="@drawable/btn_rounded"
+        android:src="@drawable/nike"
+        app:layout_constraintBottom_toTopOf="@id/nikeText"
+        app:layout_constraintDimensionRatio="H,250:125.4"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/nikeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIKE"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/nikeBtn"
+        app:layout_constraintStart_toStartOf="@id/nikeBtn"
+        app:layout_constraintEnd_toEndOf="@id/nikeBtn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Second ImageButton and TextView -->
+    <ImageButton
+        android:id="@+id/adidasBtn"
+        android:layout_width="155dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="another_button"
+        android:background="@drawable/btn_rounded"
+        android:src="@drawable/adidas"
+        app:layout_constraintBottom_toTopOf="@id/nikeText"
+        app:layout_constraintDimensionRatio="H,250:125.4"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintStart_toEndOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/anotherButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADIDAS"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/adidasBtn"
+        app:layout_constraintStart_toStartOf="@id/adidasBtn"
+        app:layout_constraintEnd_toEndOf="@id/adidasBtn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <ImageButton
+        android:id="@+id/pumaBtn"
+        android:layout_width="155dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="third_button"
+        android:background="@drawable/btn_rounded"
+        android:src="@drawable/puma"
+        app:layout_constraintBottom_toTopOf="@id/pumaText"
+        app:layout_constraintDimensionRatio="H,250:125.4"
+        app:layout_constraintTop_toBottomOf="@id/anotherButtonText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/pumaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PUMA"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/pumaBtn"
+        app:layout_constraintStart_toStartOf="@id/pumaBtn"
+        app:layout_constraintEnd_toEndOf="@id/pumaBtn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Fourth ImageButton and TextView -->
+    <ImageButton
+        android:id="@+id/skechersBtn"
+        android:layout_width="155dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="fourth_button"
+        android:background="@drawable/btn_rounded"
+        android:src="@drawable/skechers"
+        app:layout_constraintBottom_toTopOf="@id/skechersText"
+        app:layout_constraintDimensionRatio="H,250:125.4"
+        app:layout_constraintTop_toBottomOf="@id/anotherButtonText"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/skechersText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SKECHERS"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/skechersBtn"
+        app:layout_constraintStart_toStartOf="@id/skechersBtn"
+        app:layout_constraintEnd_toEndOf="@id/skechersBtn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <ImageButton
+        android:id="@+id/filaBtn"
+        android:layout_width="155dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="fifth_button"
+        android:background="@drawable/btn_rounded"
+        android:src="@drawable/fila"
+        app:layout_constraintBottom_toTopOf="@id/filaText"
+        app:layout_constraintDimensionRatio="H,250:125.4"
+        app:layout_constraintTop_toBottomOf="@id/pumaText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/filaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FILA"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/filaBtn"
+        app:layout_constraintStart_toStartOf="@id/filaBtn"
+        app:layout_constraintEnd_toEndOf="@id/filaBtn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Sixth ImageButton and TextView -->
+    <ImageButton
+        android:id="@+id/vansBtn"
+        android:layout_width="155dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="vansBtn"
+        android:background="@drawable/btn_rounded"
+        android:src="@drawable/vans"
+        app:layout_constraintBottom_toTopOf="@id/vansText"
+        app:layout_constraintDimensionRatio="H,250:125.4"
+        app:layout_constraintTop_toBottomOf="@id/pumaText"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/vansText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VANS"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/vansBtn"
+        app:layout_constraintStart_toStartOf="@id/vansBtn"
+        app:layout_constraintEnd_toEndOf="@id/vansBtn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <ImageButton
+        android:id="@+id/converseBtn"
+        android:layout_width="155dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="seventh_button"
+        android:background="@drawable/btn_rounded"
+        android:src="@drawable/converse"
+        app:layout_constraintBottom_toTopOf="@id/converseText"
+        app:layout_constraintDimensionRatio="H,250:125.4"
+        app:layout_constraintTop_toBottomOf="@id/vansText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/converseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONVERSE"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/converseBtn"
+        app:layout_constraintStart_toStartOf="@id/converseBtn"
+        app:layout_constraintEnd_toEndOf="@id/converseBtn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Eighth ImageButton and TextView -->
+    <ImageButton
+        android:id="@+id/onitsukaBtn"
+        android:layout_width="155dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="eighth_button"
+        android:background="@drawable/btn_rounded"
+        android:src="@drawable/onitsukatiger"
+        app:layout_constraintBottom_toTopOf="@id/onitsukaText"
+        app:layout_constraintDimensionRatio="H,250:125.4"
+        app:layout_constraintTop_toBottomOf="@id/vansText"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/onitsukaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ONITSUKA TIGER"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/onitsukaBtn"
+        app:layout_constraintStart_toStartOf="@id/onitsukaBtn"
+        app:layout_constraintEnd_toEndOf="@id/onitsukaBtn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <ImageButton
+        android:id="@+id/newbalanceBtn"
+        android:layout_width="155dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="ninth_button"
+        android:background="@drawable/btn_rounded"
+        android:src="@drawable/newbalance"
+        app:layout_constraintBottom_toTopOf="@id/newbalanceText"
+        app:layout_constraintDimensionRatio="H,250:125.4"
+        app:layout_constraintTop_toBottomOf="@id/converseText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/newbalanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEW BALANCE"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/newbalanceBtn"
+        app:layout_constraintStart_toStartOf="@id/newbalanceBtn"
+        app:layout_constraintEnd_toEndOf="@id/newbalanceBtn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

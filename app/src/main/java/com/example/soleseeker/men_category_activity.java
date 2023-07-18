@@ -72,7 +72,7 @@ public class men_category_activity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// Handle Basketball button click
-				Intent intent = new Intent(men_category_activity.this, main_menu_activity.class);
+				Intent intent = new Intent(men_category_activity.this, men_basketball.class);
 				startActivity(intent);
 			}
 		});
@@ -81,7 +81,7 @@ public class men_category_activity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// Handle Running button click
-				Intent intent = new Intent(men_category_activity.this, main_menu_activity.class);
+				Intent intent = new Intent(men_category_activity.this, men_running.class);
 				startActivity(intent);
 			}
 		});
@@ -90,7 +90,7 @@ public class men_category_activity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// Handle Casual button click
-				Intent intent = new Intent(men_category_activity.this, main_menu_activity.class);
+				Intent intent = new Intent(men_category_activity.this, men_casual.class);
 				startActivity(intent);
 			}
 		});

@@ -70,8 +70,8 @@ public class brand_category_activity extends AppCompatActivity {
         nikeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Nike brand click
-                // Add your code here
+                Intent intent = new Intent(brand_category_activity.this, brand_nike.class);
+                startActivity(intent);
             }
         });
 
@@ -79,8 +79,8 @@ public class brand_category_activity extends AppCompatActivity {
         adidasBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Adidas brand click
-                // Add your code here
+                Intent intent = new Intent(brand_category_activity.this, brand_adidas.class);
+                startActivity(intent);
             }
         });
 
@@ -88,8 +88,8 @@ public class brand_category_activity extends AppCompatActivity {
         pumaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Puma brand click
-                // Add your code here
+                Intent intent = new Intent(brand_category_activity.this, brand_puma.class);
+                startActivity(intent);
             }
         });
 
@@ -97,8 +97,8 @@ public class brand_category_activity extends AppCompatActivity {
         skechersBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Skechers brand click
-                // Add your code here
+                Intent intent = new Intent(brand_category_activity.this, brand_skechers.class);
+                startActivity(intent);
             }
         });
 
@@ -106,8 +106,8 @@ public class brand_category_activity extends AppCompatActivity {
         filaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Fila brand click
-                // Add your code here
+                Intent intent = new Intent(brand_category_activity.this, brand_fila.class);
+                startActivity(intent);
             }
         });
 
@@ -115,8 +115,8 @@ public class brand_category_activity extends AppCompatActivity {
         vansBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Vans brand click
-                // Add your code here
+                Intent intent = new Intent(brand_category_activity.this, brand_vans.class);
+                startActivity(intent);
             }
         });
 
@@ -124,8 +124,8 @@ public class brand_category_activity extends AppCompatActivity {
         converseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Converse brand click
-                // Add your code here
+                Intent intent = new Intent(brand_category_activity.this, brand_converse.class);
+                startActivity(intent);
             }
         });
 
@@ -133,8 +133,8 @@ public class brand_category_activity extends AppCompatActivity {
         onitsukaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Onitsuka Tiger brand click
-                // Add your code here
+                Intent intent = new Intent(brand_category_activity.this, brand_onitsukatiger.class);
+                startActivity(intent);
             }
         });
 
@@ -142,8 +142,8 @@ public class brand_category_activity extends AppCompatActivity {
         newbalanceBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle New Balance brand click
-                // Add your code here
+                Intent intent = new Intent(brand_category_activity.this, brand_newbalance.class);
+                startActivity(intent);
             }
         });
     }

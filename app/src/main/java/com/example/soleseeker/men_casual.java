@@ -16,10 +16,13 @@ public class men_casual extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_men_casual);
 
+        // Initialize the backButton
+        backButton = findViewById(R.id.backButton);
+
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainMenuIntent = new Intent(men_casual.this, main_menu_activity.class);
+                Intent mainMenuIntent = new Intent(men_casual.this, men_category_activity.class);
                 startActivity(mainMenuIntent);
                 finish();
             }

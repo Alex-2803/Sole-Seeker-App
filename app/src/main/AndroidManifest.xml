@@ -13,6 +13,33 @@
         android:theme="@style/Theme.Soleseeker"
         tools:targetApi="31">
         <activity
+            android:name=".brand_skechers"
+            android:exported="false" />
+        <activity
+            android:name=".brand_puma"
+            android:exported="false" />
+        <activity
+            android:name=".brand_adidas"
+            android:exported="false" />
+        <activity
+            android:name=".brand_nike"
+            android:exported="false" />
+        <activity
+            android:name=".brand_newbalance"
+            android:exported="false" />
+        <activity
+            android:name=".brand_onitsukatiger"
+            android:exported="false" />
+        <activity
+            android:name=".brand_converse"
+            android:exported="false" />
+        <activity
+            android:name=".brand_vans"
+            android:exported="false" />
+        <activity
+            android:name=".brand_fila"
+            android:exported="false" />
+        <activity
             android:name=".women_casual"
             android:exported="false" />
         <activity

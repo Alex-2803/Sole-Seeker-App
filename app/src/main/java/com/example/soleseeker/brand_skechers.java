@@ -7,26 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class men_running extends AppCompatActivity {
-
+public class brand_skechers extends AppCompatActivity {
     private ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_men_running);
+        setContentView(R.layout.activity_brand_skechers);
 
-        // Initialize the backButton
         backButton = findViewById(R.id.backButton);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainMenuIntent = new Intent(men_running.this, men_category_activity.class);
+                Intent mainMenuIntent = new Intent(brand_skechers.this, brand_category_activity.class);
                 startActivity(mainMenuIntent);
                 finish();
             }
         });
     }
-
 }

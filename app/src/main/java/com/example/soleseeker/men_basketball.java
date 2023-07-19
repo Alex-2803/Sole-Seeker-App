@@ -20,7 +20,7 @@ public class men_basketball extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainMenuIntent = new Intent(men_basketball.this, main_menu_activity.class);
+                Intent mainMenuIntent = new Intent(men_basketball.this, men_category_activity.class);
                 startActivity(mainMenuIntent);
                 finish();
             }

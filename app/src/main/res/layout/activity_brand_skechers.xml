@@ -69,7 +69,7 @@
         android:layout_width="179dp"
         android:layout_height="47dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/montserratbold"
+        android:fontFamily="@font/helveticanowtextbold"
         android:text="Chunky Sketchers"
         android:textColor="@color/black"
         android:textSize="18sp"

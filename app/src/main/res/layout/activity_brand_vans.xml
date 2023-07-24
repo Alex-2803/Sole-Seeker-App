@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:text="Vans Slip-On"
         android:textSize="18sp"
-        android:fontFamily="@font/montserratbold"
+        android:fontFamily="@font/helveticanowtextbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/brand_vans_Btn"
         app:layout_constraintStart_toStartOf="@id/brand_vans_Btn"

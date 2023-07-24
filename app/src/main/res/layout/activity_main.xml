@@ -47,13 +47,13 @@
 
     <ImageView
         android:id="@+id/sole_seeker_logo_1"
-        android:layout_width="200.2dp"
-        android:layout_height="178.63dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="90dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="52dp"
         android:contentDescription="sole_seeker_logo_1"
         android:src="@drawable/sole_seeker_logo_2"
-        app:layout_constraintTop_toBottomOf="@id/screenshot_2023_05_30_19_50_52_421_com_android_1"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/screenshot_2023_05_30_19_50_52_421_com_android_1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

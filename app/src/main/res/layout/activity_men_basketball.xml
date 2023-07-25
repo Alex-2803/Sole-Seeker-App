@@ -87,34 +87,20 @@
 
     <TextView
         android:id="@+id/nike_grinch_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nike Kobe Bryant"
-        android:textSize="18sp"
-        android:fontFamily="@font/helveticanowtextbold"
-        android:textColor="@color/black"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/nike_grinch_Btn"
-        app:layout_constraintStart_toStartOf="@id/nike_grinch_Btn"
-        app:layout_constraintEnd_toEndOf="@id/nike_grinch_Btn"
+        android:layout_width="166dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
-
-    <TextView
-        android:id="@+id/nike_grinch_text"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="Grinch"
-        android:textSize="18sp"
         android:fontFamily="@font/helveticanowtextbold"
+        android:gravity="center"
+        android:text="Nike Kobe Bryant Grinch"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/nike_grinch_Text"
-        app:layout_constraintStart_toStartOf="@id/nike_grinch_Btn"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@id/nike_grinch_Btn"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="8dp" />
+        app:layout_constraintStart_toStartOf="@id/nike_grinch_Btn"
+        app:layout_constraintTop_toBottomOf="@id/nike_grinch_Btn" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

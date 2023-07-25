@@ -1,25 +1,60 @@
 package com.example.soleseeker;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
-public class main_menu_activity extends Activity {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class main_menu_activity extends AppCompatActivity {
 
 	private Button shoeBrandButton;
 	private Button scanBrandButton;
 	private Button shoeSizingButton;
+	private ViewPager2 imageSlider;
+	private LinearLayout indicatorLayout;
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_menu);
 
 		shoeBrandButton = findViewById(R.id.shoeBrandButton);
 		scanBrandButton = findViewById(R.id.scanBrandButton);
 		shoeSizingButton = findViewById(R.id.shoeSizingButton);
+		imageSlider = findViewById(R.id.image_slider);
+		indicatorLayout = findViewById(R.id.indicator_layout);
+
+		List<Integer> imageList = new ArrayList<>();
+		imageList.add(R.drawable.banner_nike);
+		imageList.add(R.drawable.banner_adidas);
+		// Add more images to the list if needed
+
+		ImageSliderAdapter adapter = new ImageSliderAdapter(this, imageList);
+		imageSlider.setAdapter(adapter);
+
+		// Add indicator dots
+		setupIndicator(imageList.size());
+
+		imageSlider.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+			@Override
+			public void onPageSelected(int position) {
+				updateIndicator(position);
+			}
+		});
 
 		shoeBrandButton.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -31,4 +66,77 @@ public class main_menu_activity extends Activity {
 
 		// Add click listeners for other buttons if needed
 	}
+
+	private void setupIndicator(int count) {
+		for (int i = 0; i < count; i++) {
+			ImageView dot = new ImageView(this);
+			dot.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.indicator_dot_unselected));
+			LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+					LinearLayout.LayoutParams.WRAP_CONTENT,
+					LinearLayout.LayoutParams.WRAP_CONTENT
+			);
+			params.setMargins(8, 0, 8, 0);
+			dot.setLayoutParams(params);
+			indicatorLayout.addView(dot);
+		}
+		updateIndicator(0); // Set the initial indicator position
+	}
+
+	private void updateIndicator(int position) {
+		int count = indicatorLayout.getChildCount();
+		for (int i = 0; i < count; i++) {
+			ImageView dot = (ImageView) indicatorLayout.getChildAt(i);
+			if (i == position) {
+				dot.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.indicator_dot_selected));
+			} else {
+				dot.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.indicator_dot_unselected));
+			}
+		}
+	}
+
+	private class ImageSliderAdapter extends RecyclerView.Adapter<ImageSliderAdapter.SliderViewHolder> {
+
+		private Context context;
+		private List<Integer> imageList;
+
+		public ImageSliderAdapter(Context context, List<Integer> imageList) {
+			this.context = context;
+			this.imageList = imageList;
+		}
+
+		@NonNull
+		@Override
+		public SliderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+			View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.slide_item, parent, false);
+			return new SliderViewHolder(view);
+		}
+
+
+
+		@Override
+		public void onBindViewHolder(@NonNull SliderViewHolder holder, int position) {
+			int imageResId = imageList.get(position);
+			holder.imageView.setImageResource(imageResId);
+		}
+
+		@Override
+		public int getItemCount() {
+			return imageList.size();
+		}
+
+		class SliderViewHolder extends RecyclerView.ViewHolder {
+			ImageView imageView;
+
+			SliderViewHolder(View itemView) {
+				super(itemView);
+				imageView = itemView.findViewById(R.id.image_slider);
+			}
+		}
+	}
 }
+
+
+
+
+
+

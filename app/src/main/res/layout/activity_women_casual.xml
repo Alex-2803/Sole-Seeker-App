@@ -103,13 +103,13 @@
         android:layout_marginBottom="8dp" />
 
     <ImageButton
-        android:id="@+id/converse_taylor_Btn"
+        android:id="@+id/pumabrandkarmen_Btn"
         android:layout_width="155dp"
         android:layout_height="141dp"
         android:layout_marginTop="35dp"
         android:background="@drawable/btn_rounded"
         android:contentDescription="third_button"
-        android:src="@drawable/converse_chuck"
+        android:src="@drawable/puma_karmen"
         android:paddingTop="30dp"
         android:paddingBottom="20dp"
         android:layout_marginLeft="28dp"
@@ -117,32 +117,19 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/converse_taylor_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Converse Chuck "
-        android:textSize="18sp"
-        android:fontFamily="@font/helveticanowtextbold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/converse_taylor_Btn"
-        app:layout_constraintStart_toStartOf="@id/converse_taylor_Btn"
-        app:layout_constraintEnd_toEndOf="@id/converse_taylor_Btn"
+        android:id="@+id/pumabrandkarmen_Text"
+        android:layout_width="174dp"
+        android:layout_height="44dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
-
-    <TextView
-        android:id="@+id/converse_chuck_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Taylor All-Star"
-        android:textSize="18sp"
         android:fontFamily="@font/helveticanowtextbold"
+        android:text="Puma Karmen Rebelle Trainers "
+        android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/converse_taylor_Text"
-        app:layout_constraintStart_toStartOf="@id/converse_taylor_Btn"
-        app:layout_constraintEnd_toEndOf="@id/converse_taylor_Btn"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="8dp" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/pumabrandkarmen_Btn"
+        app:layout_constraintStart_toStartOf="@id/pumabrandkarmen_Btn"
+        app:layout_constraintTop_toBottomOf="@id/pumabrandkarmen_Btn" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

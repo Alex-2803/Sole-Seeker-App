@@ -89,37 +89,23 @@
 
     <TextView
         android:id="@+id/converse_chuck_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Converse Chuck"
-        android:textSize="18sp"
-        android:fontFamily="@font/helveticanowtextbold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/converse_chuck_Btn"
-        app:layout_constraintStart_toStartOf="@id/converse_chuck_Btn"
-        app:layout_constraintEnd_toEndOf="@id/converse_chuck_Btn"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
-
-    <TextView
-        android:id="@+id/converse_chuck_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Taylor All-Star"
-        android:textSize="18sp"
         android:fontFamily="@font/helveticanowtextbold"
+        android:text="Converse Chuck Taylor All-Star"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/converse_chuck_Text"
-        app:layout_constraintStart_toStartOf="@id/converse_chuck_Btn"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@id/converse_chuck_Btn"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="8dp" />
+        app:layout_constraintStart_toStartOf="@id/converse_chuck_Btn"
+        app:layout_constraintTop_toBottomOf="@id/converse_chuck_Btn" />
 
     <ImageButton
         android:id="@+id/onitsuka_mexico_Btn"
         android:layout_width="155dp"
         android:layout_height="141dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/btn_rounded"
         android:contentDescription="third_button"
         android:src="@drawable/onitsuka_mexico"
@@ -147,7 +133,7 @@
         android:id="@+id/vans_slip_Btn"
         android:layout_width="155dp"
         android:layout_height="141dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/btn_rounded"
         android:contentDescription="fourth_button"
         android:layout_marginLeft="45dp"
@@ -156,6 +142,37 @@
         android:paddingRight="40dp"
         app:layout_constraintTop_toBottomOf="@id/converse_chuck_Text"
         app:layout_constraintStart_toEndOf="@id/onitsuka_mexico_Text" />
+
+    <ImageButton
+        android:id="@+id/adidasbrandsuperstar_Btn"
+        android:layout_width="155dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/btn_rounded"
+        android:contentDescription="basketball_1"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="25dp"
+        android:src="@drawable/adida_superstar"
+        app:layout_constraintStart_toStartOf="@id/nike_air_Btn"
+        app:layout_constraintTop_toBottomOf="@id/vans_slip_Text"
+        app:layout_constraintStart_toEndOf="@id/nike_air_Btn"/>
+
+    <TextView
+        android:id="@+id/adidasbrandsuperstar_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adidas Superstar"
+        android:textSize="18sp"
+        android:fontFamily="@font/helveticanowtextbold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/adidasbrandsuperstar_Btn"
+        app:layout_constraintStart_toStartOf="@id/adidasbrandsuperstar_Btn"
+        app:layout_constraintEnd_toEndOf="@id/adidasbrandsuperstar_Btn"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/vans_slip_Text"

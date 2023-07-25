@@ -7,27 +7,40 @@
 	android:layout_height="match_parent">
 
 	<ImageView
-		android:id="@+id/hello"
-		android:layout_width="333dp"
-		android:layout_height="145dp"
-		android:layout_marginTop="28dp"
+		android:id="@+id/solseeker"
+		android:layout_width="334dp"
+		android:layout_height="109dp"
+		android:layout_marginTop="24dp"
 		android:contentDescription="screenshot_2023_05_30_19_50_52_421_com_android_1"
-		android:src="@drawable/frame33"
+		android:src="@drawable/solelogo"
 		app:layout_constraintDimensionRatio="H,250:125.4"
 		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.491"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<ImageView
-		android:id="@+id/steppin"
-		android:layout_width="355dp"
-		android:layout_height="218dp"
-		android:contentDescription="image_112"
-		android:src="@drawable/image_112"
-		app:layout_constraintDimensionRatio="H,300:250"
+	<androidx.viewpager2.widget.ViewPager2
+		android:id="@+id/image_slider"
+		android:layout_width="382dp"
+		android:layout_height="189dp"
+		android:layout_marginTop="136dp"
 		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/hello" />
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<LinearLayout
+		android:id="@+id/indicator_layout"
+		android:layout_width="27dp"
+		android:layout_height="16dp"
+		android:layout_marginTop="6dp"
+		android:orientation="horizontal"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.498"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/image_slider"
+		app:layout_constraintVertical_bias="0.026" />
 
 	<Button
 		android:id="@+id/shoeBrandButton"
@@ -45,8 +58,7 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.532"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/steppin" />
-
+		app:layout_constraintTop_toBottomOf="@id/indicator_layout" />
 
 	<Button
 		android:id="@+id/scanBrandButton"

@@ -123,32 +123,18 @@
 
     <TextView
         android:id="@+id/nikebrandgrinch_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nike Kobe Bryant"
-        android:textSize="18sp"
-        android:fontFamily="@font/helveticanowtextbold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/nikebrandgrinch_Btn"
-        app:layout_constraintStart_toStartOf="@id/nikebrandgrinch_Btn"
-        app:layout_constraintEnd_toEndOf="@id/nikebrandgrinch_Btn"
+        android:layout_width="171dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
-    <TextView
-        android:id="@+id/nikebrand_grinch_text"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="Grinch"
-        android:textSize="18sp"
         android:fontFamily="@font/helveticanowtextbold"
+        android:text="Nike Kobe Bryant Grinch"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/nikebrandgrinch_Text"
-        app:layout_constraintStart_toStartOf="@id/nikebrandgrinch_Btn"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@id/nikebrandgrinch_Btn"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="8dp" />
+        app:layout_constraintStart_toStartOf="@id/nikebrandgrinch_Btn"
+        app:layout_constraintTop_toBottomOf="@id/nikebrandgrinch_Btn" />
+
 
     <!-- Fourth Button and Text -->
     <ImageButton
@@ -167,33 +153,19 @@
 
     <TextView
         android:id="@+id/nikebrandzoom_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nike Zoom Air"
-        android:textSize="18sp"
-        android:fontFamily="@font/helveticanowtextbold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/nikebrandzoom_Btn"
-        app:layout_constraintStart_toStartOf="@id/nikebrandzoom_Btn"
-        app:layout_constraintEnd_toEndOf="@id/nikebrandzoom_Btn"
+        android:layout_width="152dp"
+        android:layout_height="49dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
-
-    <TextView
-        android:id="@+id/nikebrand_zoom_text"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="Pegasus"
-        android:textSize="18sp"
         android:fontFamily="@font/helveticanowtextbold"
+        android:text="Nike Zoom Air Pegasus"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/nikebrandzoom_Text"
-        app:layout_constraintStart_toStartOf="@id/nikebrandzoom_Text"
-        app:layout_constraintEnd_toEndOf="@id/nikebrandzoom_Text"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="8dp" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/nikebrandzoom_Btn"
+        app:layout_constraintStart_toStartOf="@id/nikebrandzoom_Btn"
+        app:layout_constraintTop_toBottomOf="@id/nikebrandzoom_Btn" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,7 +40,7 @@ public class main_menu_activity extends AppCompatActivity {
 
 		List<Integer> imageList = new ArrayList<>();
 		imageList.add(R.drawable.banner_nike);
-		imageList.add(R.drawable.banner_adidas);
+		imageList.add(R.drawable.banners_adidas);
 		// Add more images to the list if needed
 
 		ImageSliderAdapter adapter = new ImageSliderAdapter(this, imageList);
@@ -111,12 +111,18 @@ public class main_menu_activity extends AppCompatActivity {
 			return new SliderViewHolder(view);
 		}
 
-
-
 		@Override
 		public void onBindViewHolder(@NonNull SliderViewHolder holder, int position) {
 			int imageResId = imageList.get(position);
-			holder.imageView.setImageResource(imageResId);
+			holder.bannerImageView.setImageResource(imageResId);
+
+			// Set click listener for the "Shop Now" button
+			holder.shopNowButton.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					// Handle click action for the "Shop Now" button
+				}
+			});
 		}
 
 		@Override
@@ -125,18 +131,14 @@ public class main_menu_activity extends AppCompatActivity {
 		}
 
 		class SliderViewHolder extends RecyclerView.ViewHolder {
-			ImageView imageView;
+			ImageView bannerImageView;
+			Button shopNowButton;
 
 			SliderViewHolder(View itemView) {
 				super(itemView);
-				imageView = itemView.findViewById(R.id.image_slider);
+				bannerImageView = itemView.findViewById(R.id.bannerImageView);
+				shopNowButton = itemView.findViewById(R.id.shopNowButton);
 			}
 		}
 	}
 }
-
-
-
-
-
-

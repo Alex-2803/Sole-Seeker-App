@@ -3,6 +3,7 @@ package com.example.soleseeker;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,24 @@ public class main_menu_activity extends AppCompatActivity {
 	private ViewPager2 imageSlider;
 	private LinearLayout indicatorLayout;
 
+	private int currentPage = 0;
+	private boolean isAutoScroll = true;
+	private final long AUTO_SWIPE_INTERVAL = 3000; // Adjust the interval as needed
+
+	private Handler autoScrollHandler = new Handler();
+	private Runnable autoScrollRunnable = new Runnable() {
+		@Override
+		public void run() {
+			if (isAutoScroll && adapter != null) { // Check if the adapter is not null
+				currentPage = (currentPage + 1) % adapter.getRealItemCount();
+				imageSlider.setCurrentItem(currentPage, true);
+				autoScrollHandler.postDelayed(this, AUTO_SWIPE_INTERVAL);
+			}
+		}
+	};
+
+	private ImageSliderAdapter adapter; // Declare the adapter as a class-level variable
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -39,11 +58,11 @@ public class main_menu_activity extends AppCompatActivity {
 		indicatorLayout = findViewById(R.id.indicator_layout);
 
 		List<Integer> imageList = new ArrayList<>();
-		imageList.add(R.drawable.banner_nike);
-		imageList.add(R.drawable.banners_adidas);
+		imageList.add(R.drawable.nike_banner);
+		imageList.add(R.drawable.adidas_banner);
 		// Add more images to the list if needed
 
-		ImageSliderAdapter adapter = new ImageSliderAdapter(this, imageList);
+		adapter = new ImageSliderAdapter(this, imageList);
 		imageSlider.setAdapter(adapter);
 
 		// Add indicator dots
@@ -51,10 +70,28 @@ public class main_menu_activity extends AppCompatActivity {
 
 		imageSlider.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
 			@Override
+			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+				// Update the indicator position based on the real item count
+				updateIndicator(position % adapter.getRealItemCount());
+			}
+
+			@Override
 			public void onPageSelected(int position) {
-				updateIndicator(position);
+				// When the user manually swipes, stop the auto-scrolling
+				stopAutoScroll();
+			}
+
+			@Override
+			public void onPageScrollStateChanged(int state) {
+				// When the user releases the swipe, start auto-scrolling again
+				if (state == ViewPager2.SCROLL_STATE_IDLE) {
+					startAutoScroll();
+				}
 			}
 		});
+
+		// Start automatic swipe animation
+		startAutoScroll();
 
 		shoeBrandButton.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -65,6 +102,22 @@ public class main_menu_activity extends AppCompatActivity {
 		});
 
 		// Add click listeners for other buttons if needed
+	}
+
+
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		// Stop automatic swipe animation when the activity is paused
+		stopAutoScroll();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		// Resume automatic swipe animation when the activity is resumed
+		startAutoScroll();
 	}
 
 	private void setupIndicator(int count) {
@@ -94,6 +147,16 @@ public class main_menu_activity extends AppCompatActivity {
 		}
 	}
 
+	private void startAutoScroll() {
+		isAutoScroll = true;
+		autoScrollHandler.postDelayed(autoScrollRunnable, AUTO_SWIPE_INTERVAL);
+	}
+
+	private void stopAutoScroll() {
+		isAutoScroll = false;
+		autoScrollHandler.removeCallbacks(autoScrollRunnable);
+	}
+
 	private class ImageSliderAdapter extends RecyclerView.Adapter<ImageSliderAdapter.SliderViewHolder> {
 
 		private Context context;
@@ -113,7 +176,7 @@ public class main_menu_activity extends AppCompatActivity {
 
 		@Override
 		public void onBindViewHolder(@NonNull SliderViewHolder holder, int position) {
-			int imageResId = imageList.get(position);
+			int imageResId = imageList.get(position % imageList.size());
 			holder.bannerImageView.setImageResource(imageResId);
 
 			// Set click listener for the "Shop Now" button
@@ -127,6 +190,12 @@ public class main_menu_activity extends AppCompatActivity {
 
 		@Override
 		public int getItemCount() {
+			// Return a large value to enable infinite scrolling (cycling)
+			return Integer.MAX_VALUE;
+		}
+
+		// Add this method to get the real item count (imageList size)
+		public int getRealItemCount() {
 			return imageList.size();
 		}
 

@@ -18,4 +18,8 @@
 	<color name="rectangle_33_color">#FFFFFF</color>
 	<color name="screenshot_2023_05_30_19_50_52_421_com_android_1_color">#ffffff</color>
 	<color name="orange">#FC6726</color>
+	<color name="indicator_dot_color">#FF808080</color>
+	<color name="indicator_dot_stroke_color">#FFFFFFFF</color>
+
+
 </resources>

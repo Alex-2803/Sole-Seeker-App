@@ -14,13 +14,14 @@
 		android:layout_marginStart="16dp"
 		android:layout_marginTop="20dp"
 		android:layout_marginBottom="20dp"
-		android:background="@color/white"
+		android:background="#00000000"
 		android:contentDescription="Back Button"
 		android:src="@drawable/baseline_arrow_back_ios_new_25"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintVertical_bias="0.0" />
+
 
 	<TextView
 		android:id="@+id/titleTextView"
@@ -64,6 +65,7 @@
 			android:text="Men"
 			android:fontFamily="@font/helveticanowtextbold"
 			android:textSize="18sp"
+			android:background="#00000000"
 			tools:layout_editor_absoluteX="-4dp"
 			tools:layout_editor_absoluteY="71dp" /> <!-- Adjust the text size here -->
 
@@ -72,6 +74,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="Women"
+			android:background="#00000000"
 			android:fontFamily="@font/helveticanowtextbold"
 			android:contentDescription="women"
 			android:textSize="25dp" /> <!-- Adjust the text size here -->
@@ -81,6 +84,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="By Brand"
+			android:background="#00000000"
 			android:fontFamily="@font/helveticanowtextbold"
 			android:contentDescription="by brand"
 			android:textSize="18sp" />

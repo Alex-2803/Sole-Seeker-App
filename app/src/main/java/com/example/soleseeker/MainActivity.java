@@ -1,6 +1,9 @@
 package com.example.soleseeker;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -11,9 +14,9 @@ import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback;
 public class MainActivity extends AppCompatActivity {
 
     private int[] sliderImages = {
-            R.drawable.imageslide1,  // Replace with the resource IDs of your background images
-            R.drawable.imageslide2,
-            R.drawable.imageslide3,
+            R.drawable.image_slide1,  // Replace with the resource IDs of your background images
+            R.drawable.image_slide2,
+            R.drawable.image_slide3,
     };
 
     private ViewPager2 viewPager;
@@ -55,6 +58,17 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 int selectedPosition = position % sliderImages.length;
                 updateIndicators(selectedPosition);
+            }
+        });
+
+        // Initialize the getStartedButton and set a click listener
+        ImageButton getStartedButton = findViewById(R.id.getStartedButton);
+        getStartedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the terms_conditions activity when the button is clicked
+                Intent intent = new Intent(MainActivity.this, terms_conditions.class);
+                startActivity(intent);
             }
         });
     }

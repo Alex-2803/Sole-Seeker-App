@@ -8,9 +8,9 @@
     <ImageView
         android:id="@+id/bannerImageView"
         android:layout_width="match_parent"
-        android:layout_height="246dp"
+        android:layout_height="@dimen/_246sdp"
         android:layout_gravity="center"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/_8sdp"
         android:adjustViewBounds="true"
         android:background="@drawable/banner_item_background_modified"
         android:scaleType="center" />
@@ -18,13 +18,13 @@
     <Button
         android:id="@+id/shopNowButton"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="@dimen/_30sdp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="138dp"
-        android:layout_marginRight="89dp"
+        android:layout_marginTop="@dimen/_108sdp"
+        android:layout_marginRight="@dimen/_55sdp"
         android:background="@drawable/btn_rounded"
-        android:text="Shop Now"
         android:fontFamily="@font/helveticanowtextbold"
-        android:textSize="13dp"/>
+        android:text="Shop Now"
+        android:textSize="@dimen/_11sdp" />
 
 </FrameLayout>

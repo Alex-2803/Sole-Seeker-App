@@ -12,18 +12,18 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:elevation="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:elevation="@dimen/_1sdp"
+        tools:layout_editor_absoluteX="@dimen/_0sdp"
+        tools:layout_editor_absoluteY="@dimen/_0sdp" />
 
     <ImageView
         android:id="@+id/solelogo"
-        android:layout_width="245dp"
-        android:layout_height="191dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_181sdp"
+        android:layout_marginStart="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:contentDescription="solelogo"
-        android:elevation="2dp"
+        android:elevation="@dimen/_2sdp"
         android:src="@drawable/solemalangit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,52 +34,50 @@
 
     <TextView
         android:id="@+id/solemate"
-        android:layout_width="380dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="-160dp"
-        android:textAlignment="center"
-        android:layout_marginBottom="250dp"
-        android:layout_marginEnd="60dp"
-        android:text="FIND YOUR PERFECT SOLE MATE"
-        android:textColor="@android:color/white"
-        android:textSize="15sp"
-        android:elevation="2dp"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_45ssp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:elevation="@dimen/_2sdp"
         android:fontFamily="@font/montserratalternatessemibolditalic"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="FIND YOUR PERFECT SOLE MATE"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_15ssp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/solelogo"
-        app:layout_constraintBottom_toTopOf="@id/getStartedButton" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/solelogo" />
 
     <ImageButton
         android:id="@+id/getStartedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:src="@drawable/getstartedbtn"
+        android:layout_width="@dimen/_208sdp"
+        android:layout_height="@dimen/_63sdp"
+        android:layout_marginTop="@dimen/_120sdp"
         android:background="@android:color/transparent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/solemate"
+        android:elevation="@dimen/_2sdp"
+        android:src="@drawable/getstartedbtn"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:elevation="2dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/solemate" />
 
     <!-- ... Your existing layout code ... -->
 
 
     <LinearLayout
         android:id="@+id/indicatorLayout"
-        android:layout_width="39dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/_39sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewPager"
         app:layout_constraintVertical_bias="1.0"
-        android:elevation="3dp"> <!-- Add a higher elevation to the indicatorLayout -->
+        android:elevation="@dimen/_3sdp"> <!-- Add a higher elevation to the indicatorLayout -->
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,8 +21,8 @@
 
 	<androidx.viewpager2.widget.ViewPager2
 		android:id="@+id/image_slider"
-		android:layout_width="@dimen/_288sdp"
-		android:layout_height="@dimen/_150sdp"
+		android:layout_width="@dimen/_290sdp"
+		android:layout_height="@dimen/_155sdp"
 		android:layout_marginTop="152dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.487"

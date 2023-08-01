@@ -12,11 +12,11 @@
 
     <ImageButton
         android:id="@+id/backButton"
-        android:layout_width="62dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="@dimen/_62sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:background="#00000000"
         android:contentDescription="Back Button"
         android:src="@drawable/baseline_arrow_back_ios_new_25"
@@ -27,16 +27,16 @@
 
     <TextView
         android:id="@+id/titleTextView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
         android:fontFamily="@font/poppinsbold"
         android:text="Categories"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="@dimen/_19ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -50,15 +50,15 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:tabIndicatorColor="@color/orange"
-        app:tabIndicatorHeight="10dp"
+        app:tabIndicatorHeight="@dimen/_10sdp"
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/orange"
         app:tabTextColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp"
-        android:paddingBottom="20dp">
+        android:layout_marginTop="@dimen/_75sdp"
+        android:paddingBottom="@dimen/_15sdp">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabMen"
@@ -66,9 +66,9 @@
             android:layout_height="wrap_content"
             android:contentDescription="men"
             android:text="Men"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="-4dp"
-            tools:layout_editor_absoluteY="71dp" /> <!-- Adjust the text size here -->
+            android:textSize="@dimen/_15ssp"
+            tools:layout_editor_absoluteX="@dimen/_-4sdp"
+            tools:layout_editor_absoluteY="@dimen/_71sdp" /> <!-- Adjust the text size here -->
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabWomen"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:text="Women"
             android:contentDescription="women"
-            android:textSize="25dp" /> <!-- Adjust the text size here -->
+            android:textSize="@dimen/_15sdp"  /> <!-- Adjust the text size here -->
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabBrand"
@@ -84,19 +84,19 @@
             android:layout_height="wrap_content"
             android:text="By Brand"
             android:contentDescription="by brand"
-            android:textSize="18sp" />
+            android:textSize="@dimen/_15ssp" />
 
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/_1sdp"
         android:contentDescription="view Pager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tabLayout"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="-57dp">
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="@dimen/_-16sdp">
 
     </androidx.viewpager.widget.ViewPager>
 
@@ -110,10 +110,10 @@
     <!-- First ImageButton and TextView -->
     <ImageButton
         android:id="@+id/nikeBtn"
-        android:layout_width="155dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_111sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_11sdp"
         android:contentDescription="basketball_1"
         android:background="@drawable/btn_rounded"
         android:src="@drawable/nike"
@@ -127,22 +127,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NIKE"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/montserratbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/nikeBtn"
         app:layout_constraintStart_toStartOf="@id/nikeBtn"
         app:layout_constraintEnd_toEndOf="@id/nikeBtn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
 
     <!-- Second ImageButton and TextView -->
     <ImageButton
         android:id="@+id/adidasBtn"
-        android:layout_width="155dp"
-        android:layout_height="141dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="@dimen/_122sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_11sdp"
         android:contentDescription="another_button"
         android:background="@drawable/btn_rounded"
         android:src="@drawable/adidas"
@@ -156,20 +156,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADIDAS"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/montserratbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/adidasBtn"
         app:layout_constraintStart_toStartOf="@id/adidasBtn"
         app:layout_constraintEnd_toEndOf="@id/adidasBtn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
 
     <ImageButton
         android:id="@+id/pumaBtn"
-        android:layout_width="155dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_122sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_11sdp"
         android:contentDescription="third_button"
         android:background="@drawable/btn_rounded"
         android:src="@drawable/puma"
@@ -184,21 +185,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PUMA"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/montserratbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/pumaBtn"
         app:layout_constraintStart_toStartOf="@id/pumaBtn"
         app:layout_constraintEnd_toEndOf="@id/pumaBtn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
 
     <!-- Fourth ImageButton and TextView -->
     <ImageButton
         android:id="@+id/skechersBtn"
-        android:layout_width="155dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_122sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_11sdp"
         android:contentDescription="fourth_button"
         android:background="@drawable/btn_rounded"
         android:src="@drawable/skechers"
@@ -213,20 +215,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SKECHERS"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/montserratbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/skechersBtn"
         app:layout_constraintStart_toStartOf="@id/skechersBtn"
         app:layout_constraintEnd_toEndOf="@id/skechersBtn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
 
     <ImageButton
         android:id="@+id/filaBtn"
-        android:layout_width="155dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_122sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_11sdp"
         android:contentDescription="fifth_button"
         android:background="@drawable/btn_rounded"
         android:src="@drawable/fila"
@@ -241,21 +244,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="FILA"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/montserratbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/filaBtn"
         app:layout_constraintStart_toStartOf="@id/filaBtn"
         app:layout_constraintEnd_toEndOf="@id/filaBtn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
 
     <!-- Sixth ImageButton and TextView -->
     <ImageButton
         android:id="@+id/vansBtn"
-        android:layout_width="155dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_122sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_11sdp"
         android:contentDescription="vansBtn"
         android:background="@drawable/btn_rounded"
         android:src="@drawable/vans"
@@ -270,20 +274,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="VANS"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/montserratbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/vansBtn"
         app:layout_constraintStart_toStartOf="@id/vansBtn"
         app:layout_constraintEnd_toEndOf="@id/vansBtn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
 
     <ImageButton
         android:id="@+id/converseBtn"
-        android:layout_width="155dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_122sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_11sdp"
         android:contentDescription="seventh_button"
         android:background="@drawable/btn_rounded"
         android:src="@drawable/converse"
@@ -298,21 +303,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CONVERSE"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/montserratbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/converseBtn"
         app:layout_constraintStart_toStartOf="@id/converseBtn"
         app:layout_constraintEnd_toEndOf="@id/converseBtn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
 
     <!-- Eighth ImageButton and TextView -->
     <ImageButton
         android:id="@+id/onitsukaBtn"
-        android:layout_width="155dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_122sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_11sdp"
         android:contentDescription="eighth_button"
         android:background="@drawable/btn_rounded"
         android:src="@drawable/onitsukatiger"
@@ -327,20 +333,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ONITSUKA TIGER"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/montserratbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/onitsukaBtn"
         app:layout_constraintStart_toStartOf="@id/onitsukaBtn"
         app:layout_constraintEnd_toEndOf="@id/onitsukaBtn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
 
     <ImageButton
         android:id="@+id/newbalanceBtn"
-        android:layout_width="155dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_122sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_11sdp"
         android:contentDescription="ninth_button"
         android:background="@drawable/btn_rounded"
         android:src="@drawable/newbalance"
@@ -355,14 +362,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEW BALANCE"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/montserratbold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/newbalanceBtn"
         app:layout_constraintStart_toStartOf="@id/newbalanceBtn"
         app:layout_constraintEnd_toEndOf="@id/newbalanceBtn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

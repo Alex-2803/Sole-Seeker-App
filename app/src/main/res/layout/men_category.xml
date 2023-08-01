@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,11 +8,11 @@
 
 	<ImageButton
 		android:id="@+id/backButton"
-		android:layout_width="62dp"
-		android:layout_height="64dp"
-		android:layout_marginStart="16dp"
-		android:layout_marginTop="20dp"
-		android:layout_marginBottom="20dp"
+		android:layout_width="@dimen/_62sdp"
+		android:layout_height="@dimen/_64sdp"
+		android:layout_marginStart="@dimen/_10sdp"
+		android:layout_marginTop="@dimen/_8sdp"
+		android:layout_marginBottom="@dimen/_20sdp"
 		android:background="#00000000"
 		android:contentDescription="Back Button"
 		android:src="@drawable/baseline_arrow_back_ios_new_25"
@@ -25,16 +24,16 @@
 
 	<TextView
 		android:id="@+id/titleTextView"
-		android:layout_width="0dp"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="8dp"
-		android:layout_marginTop="24dp"
-		android:layout_marginEnd="16dp"
-		android:layout_marginBottom="16dp"
+		android:layout_marginStart="@dimen/_1sdp"
+		android:layout_marginTop="@dimen/_18sdp"
+		android:layout_marginEnd="@dimen/_16sdp"
+		android:layout_marginBottom="@dimen/_16sdp"
 		android:fontFamily="@font/poppinsbold"
 		android:text="Categories"
 		android:textColor="@color/black"
-		android:textSize="25sp"
+		android:textSize="@dimen/_19ssp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.0"
@@ -48,14 +47,14 @@
 		android:layout_height="wrap_content"
 		android:background="@color/white"
 		app:tabIndicatorColor="@color/orange"
-		app:tabIndicatorHeight="10dp"
+		app:tabIndicatorHeight="@dimen/_10sdp"
 		app:tabMode="fixed"
 		app:tabSelectedTextColor="@color/orange"
 		app:tabTextColor="@color/black"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		android:layout_marginTop="100dp">
+		android:layout_marginTop="@dimen/_75sdp">
 
 		<com.google.android.material.tabs.TabItem
 			android:id="@+id/tabMen"
@@ -64,10 +63,10 @@
 			android:contentDescription="men"
 			android:text="Men"
 			android:fontFamily="@font/helveticanowtextbold"
-			android:textSize="18sp"
+			android:textSize="@dimen/_15ssp"
 			android:background="#00000000"
-			tools:layout_editor_absoluteX="-4dp"
-			tools:layout_editor_absoluteY="71dp" /> <!-- Adjust the text size here -->
+			tools:layout_editor_absoluteX="@dimen/_-4sdp"
+			tools:layout_editor_absoluteY="@dimen/_71sdp" /> <!-- Adjust the text size here -->
 
 		<com.google.android.material.tabs.TabItem
 			android:id="@+id/tabWomen"
@@ -77,7 +76,7 @@
 			android:background="#00000000"
 			android:fontFamily="@font/helveticanowtextbold"
 			android:contentDescription="women"
-			android:textSize="25dp" /> <!-- Adjust the text size here -->
+			android:textSize="@dimen/_15sdp" /> <!-- Adjust the text size here -->
 
 		<com.google.android.material.tabs.TabItem
 			android:id="@+id/tabBrand"
@@ -87,27 +86,27 @@
 			android:background="#00000000"
 			android:fontFamily="@font/helveticanowtextbold"
 			android:contentDescription="by brand"
-			android:textSize="18sp" />
+			android:textSize="@dimen/_15ssp" />
 
 	</com.google.android.material.tabs.TabLayout>
 
 	<androidx.viewpager.widget.ViewPager
 		android:id="@+id/viewPager"
 		android:layout_width="match_parent"
-		android:layout_height="0dp"
+		android:layout_height="@dimen/_1sdp"
 		android:contentDescription="view Pager"
 		app:layout_constraintTop_toBottomOf="@id/tabLayout"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintVertical_bias="1.0"
-		tools:layout_editor_absoluteX="0dp" >
+		tools:layout_editor_absoluteX="@dimen/_0sdp" >
 
 	</androidx.viewpager.widget.ViewPager>
 
 	<ImageButton
 		android:id="@+id/Basketball"
-		android:layout_width="350dp"
-		android:layout_height="170dp"
-		android:layout_marginTop="5dp"
+		android:layout_width="@dimen/_270sdp"
+		android:layout_height="@dimen/_135sdp"
+		android:layout_marginTop="@dimen/_1sdp"
 		android:contentDescription="basketball_1"
 		android:src="@drawable/basketball_1"
 		android:background="@drawable/btn_rounded"
@@ -122,23 +121,23 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="BASKETBALL"
-		android:textSize="18sp"
+		android:textSize="@dimen/_15ssp"
 		android:fontFamily="@font/montserratbold"
 		android:textColor="@color/white"
 		app:layout_constraintTop_toTopOf="@id/Basketball"
 		app:layout_constraintBottom_toBottomOf="@id/Basketball"
 		app:layout_constraintStart_toStartOf="@id/Basketball"
 		app:layout_constraintEnd_toEndOf="@id/Basketball"
-		android:layout_marginTop="8dp"
-		android:layout_marginBottom="8dp"
-		android:layout_marginStart="8dp"
-		android:layout_marginEnd="8dp" />
+		android:layout_marginTop="@dimen/_8sdp"
+		android:layout_marginBottom="@dimen/_8sdp"
+		android:layout_marginStart="@dimen/_8sdp"
+		android:layout_marginEnd="@dimen/_8sdp" />
 
 	<ImageButton
 		android:id="@+id/Running"
-		android:layout_width="350dp"
-		android:layout_height="170dp"
-		android:layout_marginTop="1dp"
+		android:layout_width="@dimen/_270sdp"
+		android:layout_height="@dimen/_130sdp"
+		android:layout_marginTop="@dimen/_1sdp"
 		android:contentDescription="image_112"
 		android:src="@drawable/running_1"
 		android:background="@drawable/btn_rounded"
@@ -153,23 +152,23 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="RUNNING"
-		android:textSize="18sp"
+		android:textSize="@dimen/_15ssp"
 		android:fontFamily="@font/montserratbold"
 		android:textColor="@color/white"
 		app:layout_constraintTop_toTopOf="@id/Running"
 		app:layout_constraintBottom_toBottomOf="@id/Running"
 		app:layout_constraintStart_toStartOf="@id/Running"
 		app:layout_constraintEnd_toEndOf="@id/Running"
-		android:layout_marginTop="8dp"
-		android:layout_marginBottom="8dp"
-		android:layout_marginStart="8dp"
-		android:layout_marginEnd="8dp" />
+		android:layout_marginTop="@dimen/_8sdp"
+		android:layout_marginBottom="@dimen/_8sdp"
+		android:layout_marginStart="@dimen/_8sdp"
+		android:layout_marginEnd="@dimen/_8sdp" />
 
 	<ImageButton
 		android:id="@+id/Casual"
-		android:layout_width="350dp"
-		android:layout_height="170dp"
-		android:layout_marginTop="1dp"
+		android:layout_width="@dimen/_270sdp"
+		android:layout_height="@dimen/_135sdp"
+		android:layout_marginTop="@dimen/_1sdp"
 		android:contentDescription="casual_1"
 		android:src="@drawable/casual_1"
 		android:background="@drawable/btn_rounded"
@@ -184,16 +183,16 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="CASUAL"
-		android:textSize="18sp"
+		android:textSize="@dimen/_15ssp"
 		android:fontFamily="@font/montserratbold"
 		android:textColor="@color/white"
 		app:layout_constraintTop_toTopOf="@id/Casual"
 		app:layout_constraintBottom_toBottomOf="@id/Casual"
 		app:layout_constraintStart_toStartOf="@id/Casual"
 		app:layout_constraintEnd_toEndOf="@id/Casual"
-		android:layout_marginTop="8dp"
-		android:layout_marginBottom="8dp"
-		android:layout_marginStart="8dp"
-		android:layout_marginEnd="8dp" />
+		android:layout_marginTop="@dimen/_8sdp"
+		android:layout_marginBottom="@dimen/_8sdp"
+		android:layout_marginStart="@dimen/_8sdp"
+		android:layout_marginEnd="@dimen/_8sdp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
